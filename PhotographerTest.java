@@ -3,10 +3,12 @@ import org.junit.*;
 
 public class PhotographerTest {
   Photographer photographer;
+  Camera camera;
 
   @Before
   public void before() {
     photographer = new Photographer("Irma");
+    camera = new Camera();
   }
 
   @Test
@@ -14,5 +16,11 @@ public class PhotographerTest {
     assertEquals("Irma", photographer.getName());
   }
 
-  
+  @Test
+  public void canAddCamera() {
+    photographer.addCamera(camera);
+    assertEquals(1, photographer.cameraCount());
+  }
+
+
 }
