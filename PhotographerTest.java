@@ -3,12 +3,14 @@ import org.junit.*;
 
 public class PhotographerTest {
   Photographer photographer;
-  Camera camera;
+  DigitalCamera digitalCamera;
+  AnalogCamera analogCamera;
 
   @Before
   public void before() {
     photographer = new Photographer("Irma");
-    camera = new Camera();
+    digitalCamera = new DigitalCamera();
+    analogCamera = new AnalogCamera();
   }
 
   @Test
@@ -18,22 +20,22 @@ public class PhotographerTest {
 
   @Test
   public void canAddCamera() {
-    photographer.addCamera(camera);
+    photographer.addCamera(digitalCamera);
     assertEquals(1, photographer.cameraCount());
   }
 
   @Test
   public void canRemoveCamera() {
-    photographer.addCamera(camera);
-    photographer.addCamera(camera);
+    photographer.addCamera(digitalCamera);
+    photographer.addCamera(analogCamera);
     photographer.removeCamera();
     assertEquals(1, photographer.cameraCount());
   }
 
   @Test
   public void canRemoveAllCameras() {
-    photographer.addCamera(camera);
-    photographer.addCamera(camera);
+    photographer.addCamera(digitalCamera);
+    photographer.addCamera(analogCamera);
     photographer.removeAll();
     assertEquals(0, photographer.cameraCount());
   }

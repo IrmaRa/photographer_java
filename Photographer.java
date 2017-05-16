@@ -3,11 +3,11 @@ import java.util.*;
 public class Photographer {
   
   private String name;
-  private ArrayList<Camera> collection;
+  private ArrayList<Printable> collection;
 
   public Photographer(String name) {
     this.name = name;
-    this.collection = new ArrayList<Camera>();
+    this.collection = new ArrayList<Printable>();
   }
 
   public String getName() {
@@ -18,11 +18,11 @@ public class Photographer {
     return this.collection.size();
   }
 
-  public void addCamera(Camera camera) {
+  public void addCamera(Printable camera) {
     this.collection.add(camera);
   }
 
-  public Camera removeCamera() {
+  public Printable removeCamera() {
     if (cameraCount() > 0) {
       return collection.remove(0);
     }
