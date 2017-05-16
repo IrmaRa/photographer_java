@@ -33,4 +33,12 @@ public class Photographer {
     this.collection.clear();
   }
 
+  public String allCameraDetails() {
+    String details = "";
+    for (Printable camera : this.collection) {
+         details = camera.printDetails();
+    }
+    return details;
+  }
+
 }
