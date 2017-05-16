@@ -52,5 +52,4 @@ public class PhotographerTest {
     assertEquals("Sony ILCE5100L, No noise reduction, Lo-resolution", photographer.allCameraDetails());
   }
 
-
 }
