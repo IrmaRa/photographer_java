@@ -29,4 +29,8 @@ public class Photographer {
     return null;
   }
 
+  public void removeAll() {
+    this.collection.clear();
+  }
+
 }

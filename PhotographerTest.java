@@ -30,5 +30,13 @@ public class PhotographerTest {
     assertEquals(1, photographer.cameraCount());
   }
 
+  @Test
+  public void canRemoveAllCameras() {
+    photographer.addCamera(camera);
+    photographer.addCamera(camera);
+    photographer.removeAll();
+    assertEquals(0, photographer.cameraCount());
+  }
+
 
 }
